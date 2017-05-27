@@ -20,10 +20,16 @@ switch (action) {
     break;
 
   case "movie-this":
+  //if process.argv.length ===3, movie("Mr. Nobody");
+  if (process.argv.length === 3){
+    movie("Mr. Nobody");
+    return;
+  }
     movie(value);
     break;
 
   case "do-what-it-says":
+  
     doWhatItSays();
     break;
 }

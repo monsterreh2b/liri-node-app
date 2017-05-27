@@ -39,17 +39,17 @@ function doWhatItSays() {
     // Break down all the numbers inside
     data = data.split(",");
     arr.push(data);
-
+spotify(arr[1]);
     // Loop through those numbers and add them together to get a sum.
-    for (var i = 0; i < data.length; i++) {
-      if (parseFloat(data[i])) {
-        result += parseFloat(data[i]);
-      }
-    }
+    // for (var i = 0; i < data.length; i++) {
+    //   if (parseFloat(data[i])) {
+    //     result += parseFloat(data[i]);
+    //   }
+    // }
 
     // We will then print the final balance rounded to two decimal places.
-    console.log("You have a total of " + result.toFixed(2));
-  });
+//     console.log("You have a total of " + result.toFixed(2));
+   });
 }
 
 // If the "Deposit" function is called...
