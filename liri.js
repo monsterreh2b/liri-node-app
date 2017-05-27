@@ -16,6 +16,10 @@ switch (action) {
   case "spotify-this-song":
   //if process.argv.length ===3, spotify("the sign");
   //else
+  if (process.argv.length === 3){
+    spotify("The Sign");
+    return;
+  }
     spotify(value);
     break;
 
