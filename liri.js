@@ -20,6 +20,7 @@ switch (action) {
     spotify("The Sign");
     return;
   }
+  
     spotify(value);
     break;
 
@@ -73,7 +74,7 @@ for (i = 0; i < tweets.length; i++) {
 function spotify(song){
 
 var spotify = require('spotify');
- 
+//  console.log(song);
 spotify.search({ type: 'track', query: song }, function(err, data) {
     if ( err ) {
         console.log('Error occurred: ' + err);
@@ -92,10 +93,11 @@ spotify.search({ type: 'track', query: song }, function(err, data) {
     // console.log(data.tracks.items[0].artists[0].name);
     // console.log(data.tracks.items[0].name);
     
-
+console.log(data);
  var i, key;
      for (i = 0; i < data.tracks.items.length; i++) {
         console.log(data.tracks.items[i].name);
+        
         console.log(song);
           if (song === data.tracks.items[i].name){
 
